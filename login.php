@@ -2,7 +2,8 @@
 if (isset($_GET['acao']) && $_GET['acao'] == 'negative') {
 echo 'Negado';
  }
-require_once 'controller.php';
+$acao = 'logar';
+ require_once 'controller.php';
 $conexao = new Conexao();
 
 
