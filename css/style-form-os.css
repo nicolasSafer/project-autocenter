@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+	margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: #f7f7f7;
+	
+}
+section{
+	background-color: #f7f7f7;
+}
+
+
+
+/* MENU CSS */
+.container{
+	width: 100%;
+	min-height: 100vh;
+	margin-left: 0px;
+}
+
+.sidebar{
+	width: 256px;
+	height: 100vh;
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	padding: 24px;
+	
+}
+
+.sidebar .head{
+	display: flex;
+	gap: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f6f6f6;
+}
+.user-img{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+.user-img img{
+	width: 100%;
+	object-fit: cover;
+}
+.user-details .title,
+.menu .title{
+	font-size: 16px;
+	font-weight: 500;
+	color: #757575;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	
+}
+.user-details .name{
+	font-size: 16px;
+	font-weight: 700;
+
+}
+.menu ul{
+	padding-left: 0;
+}
+
+.menu ul li{
+	list-style: none;
+	margin-bottom: 5px;
+
+}
+.menu ul li a{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #757575;
+	text-decoration: none;
+	padding: 12px 8px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+.menu ul li:hover a,
+.menu ul li.active a{
+	color: #000;
+	background-color: #f6f6f6;
+}
+.menu ul li .icon{
+	font-size: 20px;
+}
+ 
+.menu ul li .text{
+	flex: 1;
+}
+
+.menu ul li .arrow{
+	font-size: 20px;
+}
+
+/* FIM MENU CSS */
