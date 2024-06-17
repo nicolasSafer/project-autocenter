@@ -13,7 +13,7 @@ body{
 	
 }
 section{
-	background-color: #f7f7f7;
+	background-color: #9acaf7;
 }
 
 a{
@@ -166,7 +166,7 @@ main header{
 
 main header h5{
 	font-size: 18px;
-	color: #369FFF;
+	color: #000;
 	font-weight: 400;
 }
 
@@ -186,6 +186,7 @@ main .analytics{
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
 	margin-top: 20px;
+	
 }
 
 main .analytics .item{
@@ -196,15 +197,22 @@ main .analytics .item{
 	min-width: 214;
 	padding: 20px;
 	border-radius: 20px;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
 }
-
+main .analytics .item:hover{
+	border: 1px solid black;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	
+}
 
 
 main .analytics .item .progressor .info h5{
 	color: #fff;
 	font-size: 20px;
 	font-weight: bold;
+	
 
 }
 
@@ -271,6 +279,7 @@ main .analytics .item:nth-child(8){
 	grid-template-columns: 1fr 1fr;
 	margin-top: 20px;
 	gap: 20px;
+	
 }
 
 .containeres .right-section .stats  .item{
@@ -281,6 +290,7 @@ main .analytics .item:nth-child(8){
 	padding: 25px;
 	background-color: #fff;
 	border-radius: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .containeres .right-section .stats .item .top{
@@ -321,6 +331,8 @@ main .analytics .item:nth-child(8){
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(4, auto);
 	gap: 10px;
+	/* border: 1px solid black; */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .containeres .right-section .weekly .title{
