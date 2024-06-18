@@ -44,5 +44,68 @@ class Acessar{
 
 }
 
+class Cadastrar_compra{
+
+    private $conexao;
+    private $com;
+
+    public function __construct(Conexao $conexao, Compra $compra)
+    {
+        //variavel conexao da tarefa.service está recebendo a $conexao de tarefa_controller.php que está acessando o metodo conectar dentro de conexao.php retornando o link de conexao
+        $this->conexao = $conexao->conectar();
+        $this->com = $compra;
+    }
+    public function read(){
+        $query = "SELECT id_ordem_compra, solicitante, data_abertura_oc, data_final_oc FROM ordem_compra";
+        $stmt = $this->conexao->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function insert(){
+        try {
+        $query = "
+       INSERT INTO ordem_compra(id_ordem_compra, fk_id_contrato, fk_nivel, solicitante, data_abertura_oc, data_final_oc, valor_total, obs, qtd_pedidos)
+VALUES(
+    3,
+    :id_contrato,
+    :nivel,
+    :solicitante,
+    :data_abertura,
+    :data_final,
+    :valor_total,
+    :obs,
+    :qtd_pedidos
+    
+)";
+
+
+
+$stmt = $this->conexao->prepare($query);
+$stmt->bindValue(':id_contrato', $this->com->__get('id_contrato'));
+$stmt->bindValue(':nivel', $this->com->__get('nivel'));
+$stmt->bindValue(':solicitante', $this->com->__get('solicitante'));
+$stmt->bindValue(':data_abertura', $this->com->__get('data_abertura'));
+$stmt->bindValue(':data_final', $this->com->__get('data_final'));
+$stmt->bindValue(':valor_total', $this->com->__get('valor_total'));
+$stmt->bindValue(':obs', $this->com->__get('obs'));
+$stmt->bindValue(':qtd_pedidos', $this->com->__get('qtd_pedidos'));
+
+
+return $stmt->execute();
+
+
+        }catch (PDOException $e) {
+            //exibindo o erro.
+            echo '<p>Error: '.$e->getMessage().'</p>';
+    }
+
+
+   
+    }
+ }
+    
+
+
 
 ?>

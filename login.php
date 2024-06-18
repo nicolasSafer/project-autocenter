@@ -61,6 +61,7 @@ $conexao = new Conexao();
             <p>Ou</p>
             <div class="line"></div>
         </div>
+
         <form method="post" action="controller.php?acao=sucess">
             <label for="email">Email</label>
             <div class="custome-input">
@@ -78,6 +79,7 @@ $conexao = new Conexao();
                 <a href="">Não possui conta?</a>
             </div>
         </form>
+        
     </div>
 
 </body>

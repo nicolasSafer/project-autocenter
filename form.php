@@ -1,13 +1,27 @@
+<?php
+$acao = 'recuperar';
+require 'controller.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BESTSTART</title>
-  <link rel="stylesheet" href="css/style-index.css">
+  <link rel="stylesheet" href="css/style-form-os.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    function novo(){
+      location.href = 'form-pedido-new.php?acao=novo';
+  }
+  </script>
+
+
 </head>
 <body>
   <!-- MENU --> 
@@ -78,7 +92,7 @@
             </a>
             <ul class="sub-menu">
               <li>
-                
+
                 <a href="">
                   <i class="ph ph-wrench"></i>
                   <span class="text">Ordem de serviço</span>
@@ -111,9 +125,95 @@
   <!-- FIM MENU -->
 
   <!-- <div class="containeres"> -->
-    <section>
+    <form action="">
       
+    </form>
+    <section>
+     <div class="separator">
+        <div class="info">
+          <h3>Ordem de serviços</h3>
+        </div>
+      </div>
+      <div class="analytics">
+        <div class="item" >
+          <div class="progressor">
+            <div class="info">
+              <h5>Pedidos Total</h5>
+              <p>$ 2.580,24</p>
+              <span><b>+15%</b></span>
+            </div>
+          </div>
+          <i class="ph ph-note"></i>
+        </div>
+
+        <div class="item" >
+          <div class="progressor">
+            <div class="info">
+              <h5>Pedidos Prefeitura</h5>
+              <p>$ 1.490,12</p>
+              <span><b>+15%</b></span>
+            </div>
+          </div>
+          <i class="ph ph-note"></i>
+        </div>
+
+        <div class="item" >
+          <div class="progressor">
+            <div class="info">
+              <h5>Pedidos Clientes</h5>
+              <p>$ 1.090,12</p>
+              <span><b>+15%</b></span>
+            </div>
+          </div>
+          <i class="ph ph-note"></i>
+        </div>
+        
+        <div class="btn-new">
+        </div>      
+      </div>
+      <!-- Fim div analitics -->
+
+      <!-- COMEÇO DIV FORM -->
+      <div class="botao">
+        <button type="button" class="btn btn-dark btn-lg"><i class="ph ph-arrow-clockwise"></i></button>
+        <button type="button" class="btn btn-success btn-lg" onclick="novo()">+ Novo pedido</button>
+        
+      </div>
+<div class="table-responsive">
+  <table class="table  table-striped table-hover ">
+        <caption>Lista de pedidos</caption>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+          <?php foreach ($compras as $indice => $compras) {?>
+            <th scope="row"><?=$compra->id_ordem_compra?></th>
+            <td><?=$compra->solicitante?></td>
+            <td><?=$compra->data_abertura_oc?></td>
+            <td><?=$compra->data_final_oc?></td>
+            <td style="width: 120px;">
+              <button type="button" class="btn btn-primary "><i class='bx bx-edit'></i></button>
+              <button type="button" class="btn btn-danger "><i class="ph ph-trash"></i></button>
+            </td>
+          </tr>
+          <?php  } ?>
+          
+        </tbody>
+      </table>
+</div>
+      
+
     </section>
+
+
+
   <!-- </div> -->
 
   <script src="script.js"></script>
@@ -140,5 +240,7 @@
       });
     });
   </script>
+  
+    
 </body>
 </html>
