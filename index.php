@@ -8,11 +8,66 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script>
+  function inicio(){
+      location.href = 'index.php';
+      // console.log(inicio()); 
+  }
+
+  // planejamento vai ser html
+
+    function oc(){
+      location.href = 'ordem-compra.php';
+      
+  }
+
+  function estoque(){
+      location.href = 'estoque.php';
+      
+  }
+
+  function expedicao(){
+      location.href = 'expedicao.php';
+      
+  }
+
+  function fornecedor(){
+      location.href = 'fornecedor.php';
+      
+  }
+
+  
+  function os(){
+      location.href = 'ordem-servico.php';
+      
+  }
+
+  function veiculo(){
+      location.href = 'veiculo.php';
+      
+  }
+
+  function financeiro(){
+      location.href = 'financeiro.php';
+      
+  }
+
+  function sair(){
+      location.href = 'login.php';
+      
+  }
+
+
+  
+  </script>
+
 </head>
 <body>
   <!-- MENU --> 
   <div class="sidebar">
     <div class="head">
+      
       <div class="user-img">
         <img src="img/img-index/brutos.jpg" alt="" >
       </div>
@@ -25,21 +80,21 @@
       <div class="menu">
         <p class="title">Menu</p>
         <ul>
-          <li class="">
-            <a href="index.html">
-              <i class="icom ph-bold ph-house-simple"></i>
+          <li class="" onclick="inicio()">
+            <a href="" >
+              <i class="icom ph-bold ph-house-simple" ></i>
               <span class="text">Inicio</span>
             </a>
           </li>
           <li class="">
-            <a href="">
+            <a href="planejamento.html">
               <i class="ph ph-calendar-dots"></i>
               <span class="text">Planejamento</span>
             </a>
           </li>
           <li class="">
             <a href="">
-              <i class="ph ph-barn"></i>
+              <i class="ph ph-barn" onclick="estoque()"></i>
               <span class="text">Estoque</span>
             </a>
           </li>
@@ -51,20 +106,20 @@
             </a>
             <ul class="sub-menu">
               <li>
-                <a href="form.html">
-                  <i class="ph ph-note-pencil"></i>
+                <a href="ordem-compra.php">
+                  <i class="ph ph-note-pencil" onclick="oc()"></i>
                   <span class="text">Ordem de compra</span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <i class="ph ph-package"></i>
-                  <span class="text">Espedição</span>
+                  <i class="ph ph-package" onclick="expedicao()"></i>
+                  <span class="text">Expedição</span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <i class="ph ph-users-three"></i>
+                  <i class="ph ph-users-three" onclick="fornecedor()"></i>
                   <span class="text">Fornecedores</span>
                 </a>
               </li>
@@ -72,20 +127,20 @@
           </li>
           <li class=""> 
             <a href="">
-              <i class="ph ph-car-profile"></i>
+              <i class="ph ph-car-profile" ></i>
               <span class="text">Veiculos</span>
               <i class="arrow ph ph-caret-down"></i>
             </a>
             <ul class="sub-menu">
               <li>
                 <a href="">
-                  <i class="ph ph-wrench"></i>
+                  <i class="ph ph-wrench" onclick="os()"></i>
                   <span class="text">Ordem de serviço</span>
                 </a>
               </li>
               <li>
                 <a href="">
-                  <i class="ph ph-car-profile"></i>
+                  <i class="ph ph-car-profile" onclick="veiculo()"></i>
                   <span class="text">Veículos Cadastrados</span>
                 </a>
               </li>
@@ -93,14 +148,14 @@
           </li>
           <li class="">
             <a href="">
-              <i class="ph ph-coins"></i>
+              <i class="ph ph-coins" onclick="financeiro()"></i>
               <span class="text">Financeiro</span>
             </a>
           </li>
           <li class="">
             <a href="">
-              <i class="ph ph-sign-out"></i>
-              <span class="text">Sair</span>
+              <i class="ph ph-sign-out" onclick="sair()"></i>
+              <span class="text" onclick="sair()">Sair</span>
             </a>
           </li>
         </ul>

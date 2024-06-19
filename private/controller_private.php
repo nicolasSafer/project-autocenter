@@ -57,9 +57,14 @@ if ($acao == 'sucess') {
 
     $service = new Cadastrar_compra($conexao, $compra);
     $compras = $service->read();
-    echo '<pre>';
-    print_r($compras);
-    echo '</pre>';
+   
+ }else if($acao == 'editar'){
+    $compra = new Compra();
+    $conexao = new Conexao();
+
+    $service = new Cadastrar_compra($conexao, $compra);
+    $compras = $service->update();
+
  }
 
 

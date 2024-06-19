@@ -1,8 +1,5 @@
 <?php
-// if (isset($_GET['acao']) && $_GET['acao'] == 'negative') {
-// echo 'Negado';
-//  }
-// $acao = 'logar';
+
  require_once 'controller.php';
 $conexao = new Conexao();
 
@@ -64,7 +61,7 @@ $conexao = new Conexao();
             </a>
             <ul class="sub-menu">
               <li>
-                <a href="form.html">
+                <a href="form.php">
                   <i class="ph ph-note-pencil"></i>
                   <span class="text">Ordem de compra</span>
                 </a>
@@ -131,16 +128,13 @@ $conexao = new Conexao();
         </div>
       </div>
 
+<?php 
+$acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
-<form method="post" action="controller.php?acao=new">
-
+if ($acao == 'novo') { ?>
+  <form method="post" action="controller.php?acao=new">
 <div class="container">
     <div class="row">
-
-        
-
-
-
         <div class="input-group col-md-6">
             <div class="formulario col-md-3">
                 
@@ -226,6 +220,101 @@ $conexao = new Conexao();
     </div>
 </div>
 </form>
+<?php }else{   ?> 
+
+<form method="post" action="controller.php?acao=update">
+<div class="container">
+    <div class="row">
+        <div class="input-group col-md-6">
+            <div class="formulario col-md-3">
+                
+                <label for="">Contrato</label>
+                <div class="input-group mb-3">
+                    <select class="form-select" name="select" aria-label="Default select example" >
+                        <option selected>Lista de contratos</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                  </div>
+            </div>
+
+            <div class="formulario col-md-3">
+                <label for="">Solicitante</label>
+                <div class="input-group mb-3">
+                    <input type="text" name="solicitante" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"  >
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="formulario input-group col-md-6">
+            <div class="formulario col-md-2">
+                <label for="">Quantidade</label>
+                <input type="text" name="quantidade" class="form-control" placeholder="" aria-label="Username" aria-describedby="basic-addon1"  >
+            </div>
+            <div class="formulario col-md-4">
+                <label for="">Valor</label>
+                <div class="input-group">
+                  
+                    <input type="text" name="valor" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"  >
+                    <span class="input-group-text">$</span>
+                    <span class="input-group-text">0.00</span>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="input-group col-md-6">
+            <div class="formulario col-md-6">
+                <label for="exampleFormControlTextarea1" class="form-label">Observações</label>
+                <textarea class="form-control" name="observacao" id="exampleFormControlTextarea1" rows="3"  ></textarea>
+              </div>
+        </div>
+
+        <div class="formulario input-group col-md-6">
+            <div class="formulario col-md-2">
+                <label for="">Data de preenchimento</label>
+                <div class="input-group">
+                    <input type="date"  name="data-inicial">
+                </div>
+            </div>
+            <div class="formulario col-md-2">
+                <label for="">Data de previsão</label>
+                <div class="input-group">
+                    <input type="date"  name="data-final">
+                </div>
+            </div>
+            <div class="formulario">
+                <label for="">Nivel de prioridade</label>
+                <select class="form-select" name="nivel" aria-label="Default select example"  > 
+                    <option selected>Lista de contratos</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Médio</option>
+                    <option value="3">Urgente</option>
+                  </select>
+            </div>
+        </div>
+        
+        <div class="botao">
+            <button type="submit" class="btn btn-success btn-lg">Editar</button>
+
+        </div>
+
+
+    
+       
+        
+
+    </div>
+  </div>
+</form>
+
+<?php }?>
+
+
+
       
     </section>
 

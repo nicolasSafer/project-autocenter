@@ -40,3 +40,10 @@ $(document).ready(function() {
         $(this).parent().addClass("active");
     });
 });
+
+$(document).ready(function() {
+    $(".menu-btn").click(function() {
+        $(".sidebar").toggleClass("active");
+        $(".menu-btn i").toggleClass("rotated");
+    });
+});
