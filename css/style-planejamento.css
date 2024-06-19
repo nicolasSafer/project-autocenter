@@ -162,10 +162,6 @@ i {
 
 
 
-
-
-
-
 /* COMEÇO CALENDARIO */
 .container{
     position: relative;
@@ -420,7 +416,7 @@ color: var(--primary-clr);
     padding-left: 70px;
     text-transform: capitalize;
 }
-.today-date .event-date{
+.today-date .event-day{
     font-size: 2rem;
     font-weight: 500;
 }
@@ -431,5 +427,86 @@ color: var(--primary-clr);
     color: #878895;
 }
 
+.events{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    overflow-x: hidden;
+    overflow-y: auto ;
+    display: flex ;
+    flex-direction: column;
+    padding: 4px;
+    
 
+}
+
+.events .event{
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    padding-left: 50px;
+    color: #fff;
+    background: linear-gradient(90deg, #3f4458, transparent);
+    cursor: pointer;
+}
+
+.events .event:nth-child(even){
+    background: transparent;
+}
+
+.events .event:hover{
+   background: linear-gradient(90deg, var(--primary-clr), transparent);; 
+}
+.events .event .title {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+.events .event .title .event-title{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.events .event .title i{
+    color: var(--primary-clr);
+    font-size: 0.5rem;
+}
+
+.events .event:hover .title i,
+.events .event:hover .title .event-time{
+    color: #fff;
+}
+
+.events .event .title .event-time{
+    font-size: 0.8rem;
+    font-style: 400;
+    color: #878895;
+    margin-left: 15px;
+    pointer-events: none;
+}
+
+.event::after{
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 3rem;
+    display: none;
+    align-items: center;
+    opacity: 0.3;
+    color: var(--primary-clr);
+    transform: translateY(-50%);
+
+
+}
+
+.event:hover::after{
+    display: flex;
+}
 /* FIM CALENDARIO */

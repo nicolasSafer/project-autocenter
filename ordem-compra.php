@@ -51,7 +51,7 @@ require 'controller.php';
         <p class="title">Menu</p>
         <ul>
           <li class="" >
-            <a href="index.php" >
+            <a href="home.php" >
               <i class="icom ph-bold ph-house-simple" ></i>
               <span class="text">Inicio</span>
             </a>
@@ -123,7 +123,7 @@ require 'controller.php';
             </a>
           </li>
           <li class="">
-            <a href="login.php">
+            <a href="index.php">
               <i class="ph ph-sign-out" ></i>
               <span class="text">Sair</span>
             </a>

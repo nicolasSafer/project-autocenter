@@ -22,10 +22,10 @@ if ($acao == 'sucess') {
 
     $service = new Acessar($conexao, $login);
     if($service = $service->logar()){
-        header('Location: index.html?acao=sucess');
+        header('Location: home.php?acao=sucess');
     }else{
         
-        header('Location: login.php?acao=negative');
+        header('Location: index.php?acao=negative');
        
     }
     
