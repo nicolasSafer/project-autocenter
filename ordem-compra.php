@@ -18,55 +18,6 @@ require 'controller.php';
 
   <script>
 
-function inicio(){
-      location.href = 'index.php';
-      console.log(inicio());
-      
-  }
-
-  // planejamento vai ser html
-
-    function oc(){
-      location.href = 'ordem-compra.php';
-      
-  }
-
-  function estoque(){
-      location.href = 'estoque.php';
-      
-  }
-
-  function expedicao(){
-      location.href = 'expedicao.php';
-      
-  }
-
-  function fornecedor(){
-      location.href = 'fornecedor.php';
-      
-  }
-
-  
-  function os(){
-      location.href = 'ordem-servico.php';
-      
-  }
-
-  function veiculo(){
-      location.href = 'veiculo.php';
-      
-  }
-
-  function financeiro(){
-      location.href = 'financeiro.php';
-      
-  }
-
-  function sair(){
-      location.href = 'login.php';
-      
-  }
-
 
 
 
@@ -99,9 +50,9 @@ function inicio(){
       <div class="menu">
         <p class="title">Menu</p>
         <ul>
-          <li class="" onclick="inicio()">
-            <a href="" >
-              <i class="icom ph-bold ph-house-simple"></i>
+          <li class="" >
+            <a href="index.php" >
+              <i class="icom ph-bold ph-house-simple" ></i>
               <span class="text">Inicio</span>
             </a>
           </li>
@@ -112,8 +63,8 @@ function inicio(){
             </a>
           </li>
           <li class="">
-            <a href="">
-              <i class="ph ph-barn" onclick="estoque()"></i>
+            <a href="estoque.php">
+              <i class="ph ph-barn" ></i>
               <span class="text">Estoque</span>
             </a>
           </li>
@@ -126,19 +77,19 @@ function inicio(){
             <ul class="sub-menu">
               <li>
                 <a href="ordem-compra.php">
-                  <i class="ph ph-note-pencil" onclick="oc()"></i>
+                  <i class="ph ph-note-pencil" ></i>
                   <span class="text">Ordem de compra</span>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <i class="ph ph-package" onclick="expedicao()"></i>
+                <a href="expedicao.php">
+                  <i class="ph ph-package" ></i>
                   <span class="text">Expedição</span>
                 </a>
               </li>
               <li>
-                <a href="">
-                  <i class="ph ph-users-three" onclick="fornecedor()"></i>
+                <a href="fornecedor.php">
+                  <i class="ph ph-users-three" ></i>
                   <span class="text">Fornecedores</span>
                 </a>
               </li>
@@ -152,13 +103,13 @@ function inicio(){
             </a>
             <ul class="sub-menu">
               <li>
-                <a href="">
-                  <i class="ph ph-wrench" onclick="os()"></i>
+                <a href="oc.php">
+                  <i class="ph ph-wrench" ></i>
                   <span class="text">Ordem de serviço</span>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="veiculo.php">
                   <i class="ph ph-car-profile" onclick="veiculo()"></i>
                   <span class="text">Veículos Cadastrados</span>
                 </a>
@@ -166,15 +117,15 @@ function inicio(){
             </ul>
           </li>
           <li class="">
-            <a href="">
-              <i class="ph ph-coins" onclick="financeiro()"></i>
+            <a href="financeiro.php">
+              <i class="ph ph-coins" ></i>
               <span class="text">Financeiro</span>
             </a>
           </li>
           <li class="">
-            <a href="">
-              <i class="ph ph-sign-out" onclick="sair()"></i>
-              <span class="text" onclick="sair()">Sair</span>
+            <a href="login.php">
+              <i class="ph ph-sign-out" ></i>
+              <span class="text">Sair</span>
             </a>
           </li>
         </ul>

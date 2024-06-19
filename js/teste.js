@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function() {
     $(".menu > ul > li > a").click(function(e) {
         // Previne o comportamento padrão apenas se houver um submenu
