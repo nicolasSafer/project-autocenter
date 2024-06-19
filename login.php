@@ -26,7 +26,7 @@ $conexao = new Conexao();
 <script>
 
   function logar(){
-    // location.href = 'login.php?acao=sucess';
+    
     
 }
 

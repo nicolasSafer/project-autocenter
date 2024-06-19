@@ -24,7 +24,9 @@ if ($acao == 'sucess') {
     if($service = $service->logar()){
         header('Location: index.html?acao=sucess');
     }else{
-        header('Location: login.html?acao=negative');
+        
+        header('Location: login.php?acao=negative');
+       
     }
     
  
