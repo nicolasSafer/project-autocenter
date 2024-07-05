@@ -8,10 +8,10 @@
 }
 
 html{
-    background-color: #c0bebe;
+    background-color: #373c4f;
 }
 body {
-    background-color: #c0bebe;
+    background-color: #373c4f;
     display: flex;
     height: 100vh;
     
@@ -23,7 +23,7 @@ section {
     width: calc(100% - 256px);
     display: flex;
     flex-direction: column;
-    background-color: #c0bebe;
+    background-color: #373c4f;
 
 }
 

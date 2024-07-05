@@ -48,9 +48,9 @@ if ($acao == 'sucess') {
     $service = new Cadastrar_compra($conexao, $compra);
    
     if($service =  $service->insert()){
-        header('Location: form.html?acao=sucess');
+        header('Location: form-oc-new.php?acao=sucess');
     }else{
-        header('Location: form.html?acao=negative');
+        header('Location: form-oc-new.php?acao=negative');
     }
 
  }else if($acao == 'recuperar'){

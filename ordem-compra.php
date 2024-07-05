@@ -11,7 +11,7 @@ require 'controller.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BESTSTART</title>
-  <link rel="stylesheet" href="css/style-form-os.css">
+  <link rel="stylesheet" href="css/style-form-oc.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -22,11 +22,11 @@ require 'controller.php';
 
 
     function novo(){
-      location.href = 'form-pedido-new.php?acao=novo';
+      location.href = 'form-oc-new.php?acao=novo';
   }
 
   function editar(id_ordem_compra){
-    location.href = 'form-pedido-new.php?acao=recuperar&id_ordem_compra='+id_ordem_compra;
+    location.href = 'form-oc-new.php?acao=recuperar&id_ordem_compra='+id_ordem_compra;
   }
 
   </script>
@@ -139,7 +139,7 @@ require 'controller.php';
     <section>
      <div class="separator">
         <div class="info">
-          <h3>Ordem de serviços</h3>
+          <!-- <h3>Ordem de serviços</h3> -->
         </div>
       </div>
       <div class="analytics">

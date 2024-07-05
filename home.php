@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BESTSTART</title>
-  <link rel="stylesheet" href="css/style-index.css">
+  <link rel="stylesheet" href="css/style-home.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -61,7 +61,7 @@
                 </a>
               </li>
               <li>
-                <a href="expedicao.php">
+                <a href="expedicao.html">
                   <i class="ph ph-package" ></i>
                   <span class="text">Expedição</span>
                 </a>
@@ -121,11 +121,11 @@
         </header>
         <div class="separator">
           <div class="info">
-            <h3>RESUMO</h3>
+            <!-- <h3>RESUMO</h3> -->
           </div>
         </div>
         <div class="analytics">
-          <div class="item" data-url="project-oficina/form.php">
+          <div class="item" data-url="ordem-compra.php">
             <div class="progressor">
               <div class="info">
                 <h5>Pedidos</h5>
@@ -225,7 +225,7 @@
               <div class="title">
                 <div class="line"></div>
                 <i class="ph ph-hourglass-low"></i>
-                <h5><b>Pedidos para essa semana</b></h5>
+                <h5><b>Expedições de hoje</b></h5>
               </div>
               <div class=""><b>10/30</b></div>
             </div>
@@ -233,7 +233,7 @@
               <div class="title">
                 <div class="line"></div>
                 <i class="ph ph-hourglass-low"></i>
-                <h5><b>Veículos dessa semana</b></h5>
+                <h5><b>--------------</b></h5>
               </div>
               <div class=""><b>10/30</b></div>
             </div>
