@@ -1,10 +1,18 @@
+<?php
+$acao = 'estoque_read_all';
+require 'controller.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BESTSTART</title>
-  <link rel="stylesheet" href="css/style-home.css">
+  <link rel="stylesheet" href="css/style-estoque.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -114,38 +122,20 @@
   <!-- FIM MENU -->
 
   <!-- <div class="containeres"> -->
-    <section>
-      <!-- <main> -->
-        <header>
-          <h5>Olá <b>Nicolas</b>, Bem vindo!</h5>
+  <section>
+  <header>
+          <h5>Estoque</h5>
         </header>
-        <div class="separator">
-          <div class="info">
-            <!-- <h3>RESUMO</h3> -->
-          </div>
+     <div class="separator">
+        <div class="info">
+          <!-- <h3>Ordem de serviços</h3> -->
         </div>
-        <div class="analytics">
-          <div class="item" data-url="ordem-compra.php">
+      </div>
+      <div class="analytics">
+      <div class="item" data-url="financeiro.html">
             <div class="progressor">
               <div class="info">
-                <h5>Relatório de estoque saldo</h5>
-              </div>
-            </div>
-            <i class="ph ph-package"></i>
-          </div>
-          <div class="item" data-url="estoque.php">
-            <div class="progressor">
-              <div class="info">
-                <h5>Relatório de estoque movimentação</h5>
-              </div>
-            </div>
-            <i class="ph ph-package"></i>
-          </div>
-          <div class="item" data-url="expedicao.php">
-            <div class="progressor">
-              <div class="info">
-                <h5>Relatório de <b>custo médio</b></h5>
-                
+                <h5>Relatório de saldo</h5>
               </div>
             </div>
             <i class="ph ph-package"></i>
@@ -153,15 +143,76 @@
           <div class="item" data-url="financeiro.html">
             <div class="progressor">
               <div class="info">
+                <h5>Relatório de movimentação</h5>
+              </div>
+            </div>
+            <i class="ph ph-package"></i>
+          </div>
+          <div class="item" data-url="financeiro.html">
+            <div class="progressor">
+              <div class="info">
+                <h5>Relatório de custo</h5>
+              </div>
+            </div>
+            <i class="ph ph-package"></i>
+          </div>
+
+        <div class="item" data-url="financeiro.html">
+            <div class="progressor">
+              <div class="info">
                 <h5>Relatório de inventário</h5>
               </div>
             </div>
             <i class="ph ph-package"></i>
           </div>
-          <!-- FIM DIV DE STATUS DOS PEDIDOS COMPLETOS -->
         
-      <!-- </main> -->
+        <div class="btn-new">
+        </div>      
+      </div>
+      <!-- Fim div analitics -->
+
+      <!-- COMEÇO DIV FORM -->
+      <div class="botao">
+        <button type="button" class="btn btn-dark btn-lg"><i class="ph ph-arrow-clockwise"></i></button>
+        <button type="button" class="btn btn-success btn-lg" onclick="novo()">+ Novo pedido</button>
+        
+      </div>
+<div class="table-responsive">
+  <table class="table  table-striped table-hover ">
+        <caption>Lista de pedidos</caption>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Solicitante</th>
+            <th scope="col">Data Inicial</th>
+            <th scope="col">Data Final</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+          <?php foreach ($estoque as $indice => $estoque) {?>
+            <th scope="row"><?=$estoque->id_estoque ?></th>
+            
+            <td><?= $estoque->fk_tipo_produto_estoque ?></td>
+            <td><?= $estoque->fk_fornecedor ?></td>
+            <td><?= $estoque->nome_produto ?></td>
+
+            <td style="width: 120px;">
+              <button type="button" class="btn btn-primary " onclick="editar(<?=$estoque->id_estoque?>)"> <i class='bx bx-edit'></i></button>
+              <button type="button" class="btn btn-danger ">  <i class="ph ph-trash"></i></button>
+            </td>
+          </tr>
+          <?php  } ?>
+          
+        </tbody>
+      </table>
+</div>
+      
+
     </section>
+
+
   <!-- </div> -->
 
   <script src="script.js"></script>

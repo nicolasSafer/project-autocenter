@@ -112,7 +112,34 @@ class Cadastrar_compra{
     }
 
 }
-    
+
+
+class Consulta_geral_estoque{
+
+    private $conexao;
+    private $est;
+
+    public function __construct(Conexao $conexao, Estoque $estoque)
+    {
+        //variavel conexao da tarefa.service está recebendo a $conexao de tarefa_controller.php que está acessando o metodo conectar dentro de conexao.php retornando o link de conexao
+        $this->conexao = $conexao->conectar();
+        $this->est = $estoque;
+    }
+
+    public function read(){
+        
+        try{
+            $query = "SELECT id_estoque, fk_tipo_produto_estoque, fk_fornecedor, nome_produto, quantidade_estoque, data_modificada, marca, categoria FROM estoque";
+            $stmt = $this->conexao->prepare($query);
+           
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        }catch (PDOException $e){ echo '<p>Error: '.$e->getMessage().'</p>'; }   
+    }
+
+
+}
 
 
 

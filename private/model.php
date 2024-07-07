@@ -44,3 +44,29 @@ class Compra
     }
 
 }
+
+
+class Estoque{
+
+    private $id_estoque;
+    private $fk_tipo_produto_estoque;
+    private $fk_fornecedor;
+    private $nome_produto;
+    private $quantidade_estoque;
+    private $data_modificada;
+    private $marca;
+    private $categoria;
+
+
+    public function __get($atributo3)
+    {
+        return $this->$atributo3;
+    }
+    public function __set($atributo3, $valor)
+    {
+        $this->$atributo3 = $valor;
+        return $this;
+    }
+
+}
+

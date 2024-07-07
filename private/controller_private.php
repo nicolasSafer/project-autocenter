@@ -88,7 +88,14 @@ if ($acao == 'sucess') {
     $service = new Cadastrar_compra($conexao, $compra);
     $compras = $service->update();
 
- }
+ }else if($acao == 'estoque_read_all'){
+   $estoque = new Estoque();
+   $conexao = new Conexao();
+
+   $service = new Consulta_geral_estoque($conexao, $estoque);
+   $estoque = $service->read();
+
+}
 
 
 
