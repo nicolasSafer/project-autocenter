@@ -61,7 +61,7 @@
                 </a>
               </li>
               <li>
-                <a href="expedicao.html">
+                <a href="expedicao.php">
                   <i class="ph ph-package" ></i>
                   <span class="text">Expedição</span>
                 </a>
@@ -143,7 +143,7 @@
             </div>
             <i class="ph ph-barn"></i>
           </div>
-          <div class="item" data-url="expedicao.html">
+          <div class="item" data-url="expedicao.php">
             <div class="progressor">
               <div class="info">
                 <h5>Expedição</h5>

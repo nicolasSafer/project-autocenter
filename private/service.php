@@ -57,10 +57,14 @@ class Cadastrar_compra{
     }
     public function read(){
         
-        $query = "SELECT id_ordem_compra, solicitante, data_abertura_oc, data_final_oc FROM ordem_compra";
-        $stmt = $this->conexao->prepare($query);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_OBJ);
+        try{
+            $query = "SELECT id_ordem_compra, solicitante, data_abertura_oc, data_final_oc FROM ordem_compra where status_oc = :status_oc";
+            $stmt = $this->conexao->prepare($query);
+            $stmt->bindValue(':status_oc', $this->com->__get('status_oc'));
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        }catch (PDOException $e){ echo '<p>Error: '.$e->getMessage().'</p>'; }   
     }
 
     public function insert(){

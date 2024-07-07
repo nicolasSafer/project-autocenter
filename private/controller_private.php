@@ -53,14 +53,35 @@ if ($acao == 'sucess') {
         header('Location: form-oc-new.php?acao=negative');
     }
 
- }else if($acao == 'recuperar'){
+ }else if($acao == 'recuperar_oc'){
+
     $compra = new Compra();
     $conexao = new Conexao();
-
+    $compra->__set('status_oc', 'LC');
     $service = new Cadastrar_compra($conexao, $compra);
     $compras = $service->read();
    
- }else if($acao == 'editar'){
+   
+ }else if($acao == 'recuperar_ex'){
+
+    $compra = new Compra();
+    $conexao = new Conexao();
+    $compra->__set('status_oc', 'EX');
+    $service = new Cadastrar_compra($conexao, $compra);
+    $compras = $service->read();
+   
+  
+   
+ }else if($acao == 'recuperar_fn'){
+
+    $compra = new Compra();
+    $conexao = new Conexao();
+    $compra->__set('status_oc', 'FN');
+    $service = new Cadastrar_compra($conexao, $compra);
+    $compras = $service->read();
+   
+   
+ } else if($acao == 'editar'){
     $compra = new Compra();
     $conexao = new Conexao();
 

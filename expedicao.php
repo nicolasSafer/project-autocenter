@@ -1,5 +1,6 @@
 <?php
-$acao = 'recuperar_oc';
+$acao = 'recuperar_ex';
+$status_oc = 'EX';
 require 'controller.php';
 
 ?>
@@ -30,7 +31,62 @@ require 'controller.php';
   }
 
   </script>
+  <style>
+        .progress-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
 
+        .progress-bar-step {
+            flex-grow: 1;
+            text-align: center;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .progress-bar-step::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: blue;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .progress-bar-step.active::before {
+            background-color: green;
+        }
+
+        .progress-bar-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 2px;
+            background-color: gray;
+            z-index: 0;
+        }
+
+        .progress-bar-step.active + .progress-bar-step::after {
+            background-color: green;
+        }
+
+        .info-container {
+            padding: 1em;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+        }
+       
+    </style>
 
 </head>
 <body>
@@ -196,6 +252,7 @@ require 'controller.php';
             <th scope="col">Solicitante</th>
             <th scope="col">Data Inicial</th>
             <th scope="col">Data Final</th>
+            <th scope="col">Movimentação</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -207,7 +264,21 @@ require 'controller.php';
             <td><?= $compras->solicitante ?></td>
             <td><?= $compras->data_abertura_oc ?></td>
             <td><?= $compras->data_final_oc ?></td>
-
+            <td>
+                        <div class="info-container">
+                            <div class="progress-container">
+                                
+                                <div class="progress-bar-step active"><p>Liberado</p></div>
+                                <div class="progress-bar-step active"><p>NF</p></div>
+                                
+                                <div class="progress-bar-step"><p>Separação</p></div>
+                                <div class="progress-bar-step"><p>Conferido</p></div>
+                                <div class="progress-bar-step"><p>Expedição</p></div>
+                                <div class="progress-bar-step"><p>Entrega</p></div>
+                            </div>
+                            
+                        </div>
+                    </td>
             <td style="width: 120px;">
               <button type="button" class="btn btn-primary " onclick="editar(<?=$compras->id_ordem_compra?>)"> <i class='bx bx-edit'></i></button>
               <button type="button" class="btn btn-danger ">  <i class="ph ph-trash"></i></button>
