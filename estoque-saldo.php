@@ -126,7 +126,7 @@ require 'controller.php';
   <!-- <div class="containeres"> -->
   <section>
   <header>
-          <h5>Estoque</h5>
+          <h5>Estoque de saldo</h5>
         </header>
      <div class="separator">
         <div class="info">
@@ -134,7 +134,7 @@ require 'controller.php';
         </div>
       </div>
       <div class="analytics">
-      <div class="item" data-url="estoque-saldo.php">
+      <div class="item active" data-url="estoque-saldo.php">
             <div class="progressor">
               <div class="info">
                 <h5>Relatório de saldo</h5>

@@ -1,3 +1,6 @@
+/* CSS DO ESTOQUE POR ALGUM MOTIVO A APL EM PHP N RECONHECE O NOME ESTOQUE.CSS ENT FICOU EST */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 * {
@@ -7,14 +10,15 @@
     font-family: 'Manrope', sans-serif;
 }
 
-html{
+html {
     background-color: #373c4f;
 }
+
 body {
     background-color: #373c4f;
     display: flex;
     height: 100vh;
-    
+
 }
 
 section {
@@ -115,8 +119,8 @@ i {
     transition: all 0.3s ease;
 }
 
-.menu ul li > a:hover,
-.menu ul li.active > a {
+.menu ul li>a:hover,
+.menu ul li.active>a {
     color: #000;
     background-color: #369FFF;
 }
@@ -172,8 +176,9 @@ section .separator h4 {
     margin-top: 20px;
     padding-top: 50px;
 }
+
 section .separator button {
-   
+
     width: 44px;
     height: 42px;
     padding-left: 5px;
@@ -183,7 +188,7 @@ section .separator button {
 
 }
 
-section .botao{
+section .botao {
     font-weight: bold;
     font-size: 24px;
     margin-top: 20px;
@@ -201,7 +206,8 @@ section .analytics {
     margin-top: 20px;
     align-items: center;
 }
-section .analytics button{
+
+section .analytics button {
     margin-bottom: 100px;
 }
 
@@ -248,7 +254,7 @@ section .analytics .item .progressor .info span {
 
 section .analytics .item i {
     font-size: 80px;
-    color: #fff;
+    color: #000;
 }
 
 section .analytics .item:nth-child(1),
@@ -256,8 +262,16 @@ section .analytics .item:nth-child(2),
 section .analytics .item:nth-child(3),
 section .analytics .item:nth-child(4){
     background: #fff;
- }
- 
- section table{
+
+}
+
+section .analytics .item:hover,
+section .analytics .item.active{
+    background-color: #369FFF;
+    border: 1px solid #000;
+    box-shadow: 0 2px 4px rgba(255, 254, 254, 0.3);
+}
+
+section table {
     border-radius: 20%;
- }
+}

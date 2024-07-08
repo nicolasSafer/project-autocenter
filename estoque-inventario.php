@@ -126,7 +126,7 @@ require 'controller.php';
   <!-- <div class="containeres"> -->
   <section>
   <header>
-          <h5>Estoque</h5>
+          <h5>Estoque de inventario</h5>
         </header>
      <div class="separator">
         <div class="info">
@@ -159,7 +159,7 @@ require 'controller.php';
             <i class="ph ph-package"></i>
           </div>
 
-        <div class="item" data-url="estoque-inventario.php">
+        <div class="item active" data-url="estoque-inventario.php">
             <div class="progressor">
               <div class="info">
                 <h5>Relatório de inventário</h5>
