@@ -174,11 +174,27 @@ require 'controller.php';
       <!-- Fim div analitics -->
 
       <!-- COMEÇO DIV FORM -->
-      <div class="botao">
-        <button type="button" class="btn btn-dark btn-lg"><i class="ph ph-arrow-clockwise"></i></button>
-        <button type="button" class="btn btn-success btn-lg" onclick="novo()">+ Novo pedido</button>
-        
+      <div class="container botao">
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-center">
+            <button type="button" class="btn btn-dark btn-lg me-2"><i class="ph ph-arrow-clockwise"></i></button>
+            <button type="button" class="btn btn-success btn-lg me-2" onclick="novo()">+ Adicionar</button>
+            <button type="button" class="btn btn-light me-2"><b>Importar</b></button>
+            <button type="button" class="btn btn-light me-2"><b>Excluir</b></button>
+            <button type="button" class="btn btn-light me-4"><b>Opções extras</b></button>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Pesquisar" style="max-width: 250px;">
+            <button type="button" class="btn btn-primary "><i class="ph ph-magnifying-glass"></i></button>
+            
+          </div>
+        </div>
       </div>
+
+      
+     
+        
+       
+         
+      
 <div class="table-responsive">
   <table class="table  table-striped table-hover ">
         <caption>Lista de pedidos</caption>
@@ -202,7 +218,7 @@ require 'controller.php';
 
             <td style="width: 120px;">
               <button type="button" class="btn btn-primary " onclick="editar(<?=$estoque->id_estoque?>)"> <i class='bx bx-edit'></i></button>
-              <button type="button" class="btn btn-danger ">  <i class="ph ph-trash"></i></button>
+              <button type="button" class="btn btn-primary "> <i class="ph ph-paperclip"></i></button>
             </td>
           </tr>
           <?php  } ?>

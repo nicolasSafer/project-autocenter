@@ -176,8 +176,10 @@ require 'controller.php';
       <!-- COMEÇO DIV FORM -->
       <div class="botao">
         <button type="button" class="btn btn-dark btn-lg"><i class="ph ph-arrow-clockwise"></i></button>
-        <button type="button" class="btn btn-success btn-lg" onclick="novo()">+ Novo pedido</button>
-        
+        <button type="button" class="btn btn-success btn-lg" onclick="novo()">+ Adicionar</button>
+        <button type="button" class="btn btn-light "> <b>Importar</b></button>
+        <button type="button" class="btn btn-light "> <b>Excluir</b></button>
+        <button type="button" class="btn btn-light "> <b>Opções extras</b></button>
       </div>
 <div class="table-responsive">
   <table class="table  table-striped table-hover ">
@@ -202,7 +204,7 @@ require 'controller.php';
 
             <td style="width: 120px;">
               <button type="button" class="btn btn-primary " onclick="editar(<?=$estoque->id_estoque?>)"> <i class='bx bx-edit'></i></button>
-              <button type="button" class="btn btn-danger ">  <i class="ph ph-trash"></i></button>
+              <button type="button" class="btn btn-primary ">  <i class="ph ph-paperclip"></i></button>
             </td>
           </tr>
           <?php  } ?>

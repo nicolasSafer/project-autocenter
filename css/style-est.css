@@ -195,6 +195,7 @@ section .botao {
     padding-top: 50px;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    padding-left: 0px;
 
     /* margin-left: auto; */
 }
